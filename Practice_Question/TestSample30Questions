@@ -1,0 +1,115 @@
+#8List
+shift = 3 // 2 - 2 
+if shift < 0:
+    print("#")
+elif shift == 0:
+    print("##")
+else:
+    print("###")
+
+#10List
+planeta = 1 + 1 // 2 * 3
+if planeta > 0:
+    print("#")
+elif planeta > 1:
+    print("##")
+else:
+    print("###")
+
+#11List
+others = 0
+for i in range(2):
+    for j in range(2):
+        if i == j:
+            others += 1
+else:
+    others += 1
+print(others)
+
+#12List
+torque = 5
+while torque > 0:
+    torque -= 3
+    print("*", end="")
+else:
+    print("*")
+
+#13List
+power = 1
+while power < 5:
+    power += 1
+    print("@", end="")
+    if power == 3:
+        break
+else:
+    print("@")
+
+#14List
+angle = 1
+for i in range(2, 5):
+    if 2 * i > 4:
+        angle += 1
+else:
+    angle -= 1
+print(angle)
+
+#19List
+train_speed = {"FlyingScotman": 201, "TGV": 320, "Shinkansen": 320}
+
+for train in train_speed:
+    print(train[0], end="")
+
+#20List
+list_one = [1,2]
+list_two = list_one[:]
+list_two.append(3)
+print(list_one[-1])
+
+#22List
+answers = (True, True, False)
+selection = answers[3:]
+points = 0
+for answer in selection[-2:]:
+    if answer:
+        points += 1 
+print(points)
+
+#25List
+def process(data):
+    data[1] = 2
+    return data[-2]
+
+measurements = [0 for i in range(3)]
+process(measurements)
+print(measurements[-2])
+
+#27List
+def walk(top):
+    if top == 0:
+        return 0
+    return top + walk(top - 1)
+
+print(walk(2))
+
+#28List
+def combine(width, height = 10, depth = 0, is_3D = False):
+    return (is_3D, width, height, depth)
+
+print(combine(height = 1, width = 2)[3])
+
+#30List
+def sample(value):
+    return total + value
+
+total = 0
+new_total = sample()
+new_total = sample(total)
+print(total)
+
+#31List
+try:
+    width = float('width')
+except ValueError:
+    print("Not a number")
+except:
+    print("Bad luck")
